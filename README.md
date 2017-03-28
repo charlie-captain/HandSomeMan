@@ -1,5 +1,8 @@
 ## 前言
-- #### 相信大家都有听说过这三大框架吧,这是最近很火的框架
+	
+- ### 相信大家都有听说过这三大框架吧,这是最近很火的框架
+
+	---
 
 ## Retrofit的详解 
 
@@ -13,15 +16,18 @@
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     ```
     2. #### 创建Api接口
-    >作为一个get请求的url,并提供一些可变的参数
-    
-    ```
+	    
+	    >作为一个get请求的url,并提供一些可变的参数
+	    
+	    ```
     @GET("yoururl/{neededParameter}")
     Call<ResponseBody> getParameter(@Path("parameter") String parameter);
-    ```
-        这里的@Path只是为了用后面parameter来代替{neededParameter}这个占位符
+	    ```
     
-        还有其他的例如@Query就是类似于url?parameter=...这种
+        这里的**@Path**只是为了用后面parameter来代替{neededParameter}这个占位符
+        
+        还有其他的例如**@Query**就是类似于url?parameter=...这种
+        
     3. #### 创建retrofit实例
     ```
     Retrofit retrofit=new Retrofit.Builder()
@@ -50,8 +56,7 @@
     >这里先留个位子,改天拆下轮子,研究下这个库的源码才行.
 
 ---
-    
-    
+       
 ## Rxjava
 
 - 主要参考于[给 Android 开发者的 RxJava 详解](http://gank.io/post/560e15be2dca930e00da1083)
@@ -66,7 +71,7 @@
     
     ```
      @GET("index")
-    rx.Observable<NewList> getNews(@Query("key") String key);
+     rx.Observable<NewList> getNews(@Query("key") String key);
     ```
 
     只是把返回值换成了Rxjava 的Observable, 为什么这么做呢, 接下来就在Retrofit下做手脚了:
@@ -124,8 +129,7 @@
     
     首先是**addCallAdapterFactory(RxJavaCallAdapterFactory.create())** ,这个是添加一个RxJava适配器
     
-    然后就是那一大串什么鬼, getNews(key)后面是什么鬼, **其实是**getNews返回的一个Obserable类型, 这个Obserable呢, 就是可以被观察的对象了, 
-    详情就可以去了解上面那篇文章.
+    然后就是那一大串什么鬼, getNews(key)后面是什么鬼, **其实是** getNews返回的一个Obserable类型, 这个Obserable呢, 就是可以被观察的对象了, 详情就可以去了解上面那篇文章.
     
     **map**操作进行了简单的json数据解析, 而这个操作是进行再子线程的io里, 然后再回到主线程, 将数据分别显示出来.
     
@@ -154,12 +158,16 @@
 - ### MVC 和 MCP 的区别
 
     这里引用一下hongyang大佬的图片, 地址[浅谈 MVP in Android](http://blog.csdn.net/lmj623565791/article/details/46596109)
-    
+
+	![这里写图片描述](http://img.blog.csdn.net/20170328205303098?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2lsbGlhbWNoZXc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 - ### 项目实例
 
     其实大多数用来做登录注册的demo, 其实整个app用的MVP主要还是在登录注册, 其他的用了Retrofit和RxJava
     
     首先看看下面的红色框的文件
+    
+    ![这里写图片描述](http://img.blog.csdn.net/20170328205235762?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2lsbGlhbWNoZXc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
     
     1. 创建Model
     
@@ -362,10 +370,19 @@
         }
         ```
         
+	     效果图：
+		![这里写图片描述](http://img.blog.csdn.net/20170328205408209?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2lsbGlhbWNoZXc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+	
 ---
 
 ## 总结
 
-虽然感觉这三大框架的app到处都是, 但是要真正的熟悉里面的逻辑, 还是需要花费一定时间来拆轮子, 不研究这些源码,只会使用是永远不足够的, 好好加油!!!
+- #### 虽然感觉这三大框架的app到处都是, 但是要真正的熟悉里面的逻辑, 还是需要花费一定时间来拆轮子, 不研究这些源码,只会使用是永远不足够的, 好好加油!
 
----
+- #### 最终效果图:
+
+	![这里写图片描述](http://img.blog.csdn.net/20170328211840980?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2lsbGlhbWNoZXc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast) 
+
+- #### Demo地址(第一次写有点菜): [Retrofit+RxJava+MVP](https://github.com/703692499/RxReOk/tree/master)
+
+	---
