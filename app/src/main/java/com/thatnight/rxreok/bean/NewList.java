@@ -9,93 +9,160 @@ import java.util.List;
 
 public class NewList {
 
+
     /**
-     * code : 200
-     * msg : success
-     * newslist : [{"ctime":"2017-03-11 11:05","title":"济南工地土层塌方 消防员徒手挖出两名被困工人","description":"搜狐社会","picUrl":"http://photocdn.sohu.com/20170311/Img483001844_ss.jpeg","url":"http://news.sohu.com/20170311/n483001843.shtml"},{"ctime":"2017-03-11 11:08","title":"资深殡葬人士揭秘：死人生意利润率达1000%","description":"搜狐社会","picUrl":"http://photocdn.sohu.com/20170311/Img483001981_ss.jpeg","url":"http://news.sohu.com/20170311/n483001980.shtml"},{"ctime":"2017-03-11 11:44","title":"网传广州有人悬赏81万元和千万豪宅找狗","description":"搜狐社会","picUrl":"http://photocdn.sohu.com/20170311/Img483007454_ss.jpeg","url":"http://news.sohu.com/20170311/n483007452.shtml"},{"ctime":"2017-03-11 10:00","title":"男子在公路上玩\u201c漂移\u201d 用\u201cV\u201d字手势挑衅民警","description":"搜狐社会","picUrl":"http://photocdn.sohu.com/20170311/Img482998405_ss.jpeg","url":"http://news.sohu.com/20170311/n482998404.shtml"},{"ctime":"2017-03-11 09:14","title":"女子轧死宠物狗遭对方捅杀全家灭门 凶手获死刑","description":"搜狐社会","picUrl":"http://photocdn.sohu.com/20170311/Img482993505_ss.jpeg","url":"http://news.sohu.com/20170311/n482995921.shtml"},{"ctime":"2017-03-11 09:53","title":"村里的小学生 原来吃了这么多劣质食品","description":"搜狐社会","picUrl":"http://photocdn.sohu.com/20170311/Img482995923_ss.png","url":"http://news.sohu.com/20170311/n482998092.shtml"},{"ctime":"2017-03-11 09:58","title":"男孩被卡广场摇椅 哭喊：先帮我请假","description":"搜狐社会","picUrl":"http://photocdn.sohu.com/20170311/Img482998093_ss.jpeg","url":"http://news.sohu.com/20170311/n482998292.shtml"},{"ctime":"2017-03-11 07:44","title":"女子情绪失控砍伤前夫 将幼子推下楼致其坠亡","description":"搜狐社会","picUrl":"http://photocdn.sohu.com/20170311/Img482992002_ss.jpeg","url":"http://news.sohu.com/20170311/n482993503.shtml"},{"ctime":"2017-03-11 07:46","title":"保安救悬空男孩 以自身当\u201c肉垫\u201d不幸身亡(图)","description":"搜狐社会","picUrl":"http://photocdn.sohu.com/20170311/Img482993505_ss.jpeg","url":"http://news.sohu.com/20170311/n482993504.shtml"},{"ctime":"2017-03-11 06:48","title":"女子丧夫小三上门讨债 对方是自己资助的贫困女生","description":"搜狐社会","picUrl":"http://photocdn.sohu.com/20170311/Img482992002_ss.jpeg","url":"http://news.sohu.com/20170311/n482992690.shtml"}]
+     * reason : 成功的返回
+     * result : {"stat":"1","data":[{"uniquekey":"b97ebcd72b97a7a7374c3ee1343f7544","title":"太空可数毛！中国最强卫星传回超高清照片","date":"2017-03-14 15:26","category":"头条","author_name":"快科技","url":"http://mini.eastday.com/mobile/170314152618212.html","thumbnail_pic_s":"http://06.imgmini.eastday.com/mobile/20170314/20170314152618_8fbc34ae18c4bac2f568435c8386c634_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://06.imgmini.eastday.com/mobile/20170314/20170314152618_8fbc34ae18c4bac2f568435c8386c634_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://06.imgmini.eastday.com/mobile/20170314/20170314152618_8fbc34ae18c4bac2f568435c8386c634_3_mwpm_03200403.jpeg"},{"uniquekey":"bf66642b9e9a865632c095aa0d46d281","title":"沙特国王萨勒曼到访皇居 日本天皇设宴迎接","date":"2017-03-14 15:56","category":"头条","author_name":"环球网","url":"http://mini.eastday.com/mobile/170314155613456.html","thumbnail_pic_s":"http://05.imgmini.eastday.com/mobile/20170314/20170314155613_481bdc206760271462311669d657179d_1_mwpm_03200403.jpeg"},{"uniquekey":"33ed351f2d321860ccd771ce449b5360","title":"不顾菲律宾抗议 影射菲总统美剧照常播出","date":"2017-03-14 15:56","category":"头条","author_name":"环球网","url":"http://mini.eastday.com/mobile/170314155613008.html","thumbnail_pic_s":"http://02.imgmini.eastday.com/mobile/20170314/20170314155613_1a028834a343f8393f048505715c90a3_1_mwpm_03200403.jpeg"},{"uniquekey":"f8b87a7ac4024243ae460f334147a498","title":"白宫发言人：特朗普说\u201c窃听\u201d时，意思并非\u201c窃听\u201d...","date":"2017-03-14 15:26","category":"头条","author_name":"环球网","url":"http://mini.eastday.com/mobile/170314152610810.html","thumbnail_pic_s":"http://02.imgmini.eastday.com/mobile/20170314/20170314152610_81f5fe470a0d1845f7471bfc13c6b7d2_1_mwpm_03200403.png","thumbnail_pic_s02":"http://02.imgmini.eastday.com/mobile/20170314/20170314152610_81f5fe470a0d1845f7471bfc13c6b7d2_3_mwpm_03200403.png"},{"uniquekey":"f723c6da0425d1aa159c3061dd8c04f6","title":"受特朗普旅行禁令影响  加拿大女童子军组织取消访美计划","date":"2017-03-14 15:26","category":"头条","author_name":"环球网","url":"http://mini.eastday.com/mobile/170314152608328.html","thumbnail_pic_s":"http://03.imgmini.eastday.com/mobile/20170314/20170314152608_877b71c5893d2c85ff9830a86bb376c4_1_mwpm_03200403.jpeg"},{"uniquekey":"d8f023624986f07e029aaede242d158d","title":"中国建筑队完成\u201c非洲第一高\u201d 将成为世界第三大清真寺","date":"2017-03-14 15:17","category":"头条","author_name":"中国日报网","url":"http://mini.eastday.com/mobile/170314151757493.html","thumbnail_pic_s":"http://00.imgmini.eastday.com/mobile/20170314/20170314151757_eedfc0e87c10fa9478ca4fe8695db1cb_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://00.imgmini.eastday.com/mobile/20170314/20170314151757_2a6ca57216f0db27b3b43889e319f09e_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://00.imgmini.eastday.com/mobile/20170314/20170314151757_670c445fb38498cc8e3eec2258d8ea57_3_mwpm_03200403.jpeg"},{"uniquekey":"359783d86923ef847e1408a6ccaa11aa","title":"中银国际首席策略：A股春暖花待谢 整体估值仍然偏高维持谨慎","date":"2017-03-14 15:13","category":"头条","author_name":"新浪","url":"http://mini.eastday.com/mobile/170314151311092.html","thumbnail_pic_s":"http://02.imgmini.eastday.com/mobile/20170314/20170314151311_2c09a5f695f715b9341c2e82ca9590df_1_mwpm_03200403.png","thumbnail_pic_s02":"http://02.imgmini.eastday.com/mobile/20170314/20170314151311_2c09a5f695f715b9341c2e82ca9590df_2_mwpm_03200403.png","thumbnail_pic_s03":"http://02.imgmini.eastday.com/mobile/20170314/20170314151311_2c09a5f695f715b9341c2e82ca9590df_3_mwpm_03200403.png"},{"uniquekey":"e21631e30821694a34f3fb8af724cdea","title":"北京方庄桥东一路虎车冲上公交车站，1死2伤","date":"2017-03-14 15:02","category":"头条","author_name":"北京交通广播","url":"http://mini.eastday.com/mobile/170314150210716.html","thumbnail_pic_s":"http://03.imgmini.eastday.com/mobile/20170314/20170314150210_d515895f253926d78656e69cd34dfc61_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://03.imgmini.eastday.com/mobile/20170314/20170314150210_d515895f253926d78656e69cd34dfc61_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://03.imgmini.eastday.com/mobile/20170314/20170314150210_d515895f253926d78656e69cd34dfc61_3_mwpm_03200403.jpeg"},{"uniquekey":"e82054201d6d5103e7854274c2ae17ec","title":"美国副总统彭斯4月将访问印尼、日、韩、澳，修补与盟友关系","date":"2017-03-14 14:58","category":"头条","author_name":"澎湃新闻","url":"http://mini.eastday.com/mobile/170314145838933.html","thumbnail_pic_s":"http://08.imgmini.eastday.com/mobile/20170314/20170314145838_02160cae557d0623758e1c72433d1051_1_mwpm_03200403.jpeg"},{"uniquekey":"1eddd1305d74d3f3176005f62902c937","title":"北京方庄桥一路虎冲上公交站台 致行人一死两伤","date":"2017-03-14 14:56","category":"头条","author_name":"北青网-北京青年报","url":"http://mini.eastday.com/mobile/170314145647568.html","thumbnail_pic_s":"http://07.imgmini.eastday.com/mobile/20170314/20170314145647_a8021e91502198917f376160fa0c463f_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://07.imgmini.eastday.com/mobile/20170314/20170314145647_a8021e91502198917f376160fa0c463f_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://07.imgmini.eastday.com/mobile/20170314/20170314145647_a8021e91502198917f376160fa0c463f_3_mwpm_03200403.jpeg"},{"uniquekey":"86407fe16797b1e5fac2021ebcab582a","title":"台湾特种部队只穿红内裤训练","date":"2017-03-14 14:55","category":"头条","author_name":"环球网","url":"http://mini.eastday.com/mobile/170314145536511.html","thumbnail_pic_s":"http://08.imgmini.eastday.com/mobile/20170314/20170314145536_d68d081131f6c5480c68e23f56e788e2_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://08.imgmini.eastday.com/mobile/20170314/20170314145536_bf35ccf19b8130817dd83f6303032096_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://08.imgmini.eastday.com/mobile/20170314/20170314145536_9c5e55d20192b598bed9005e48ac86d6_3_mwpm_03200403.jpeg"},{"uniquekey":"10487cf10d28b5e70c5ea1d4b861406c","title":"震惊！14岁少女诞下女婴，让人更没想到的是孩子父亲\u2026\u2026","date":"2017-03-14 14:52","category":"头条","author_name":"观望","url":"http://mini.eastday.com/mobile/170314145244444.html","thumbnail_pic_s":"http://04.imgmini.eastday.com/mobile/20170314/20170314_d0df9125fbfd2a56b5f175777601c7fc_cover_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://04.imgmini.eastday.com/mobile/20170314/20170314_8655840af030d838c7afb0a5c6e290b9_cover_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://04.imgmini.eastday.com/mobile/20170314/20170314_a1bb5ace4e9186f53ff83b6bf4c068c5_cover_mwpm_03200403.jpeg"},{"uniquekey":"c3a4bf64a9823f16120a992383ee8404","title":"赌王儿子遭航空公司冷待 知其身份后态度大变","date":"2017-03-14 14:46","category":"头条","author_name":"新浪娱乐","url":"http://mini.eastday.com/mobile/170314144633472.html","thumbnail_pic_s":"http://06.imgmini.eastday.com/mobile/20170314/20170314144633_70f168ccab579627aa283f28d2a3b0aa_1_mwpm_03200403.jpeg"},{"uniquekey":"53d706bb2220dfbcc84538cd84488a92","title":"这个国家曾经送中国一艘航母，中国为什么婉言谢绝了？","date":"2017-03-14 14:43","category":"头条","author_name":"兰博军事迷","url":"http://mini.eastday.com/mobile/170314144311002.html","thumbnail_pic_s":"http://01.imgmini.eastday.com/mobile/20170314/20170314144311_cd1263aaaaab4e88c76a1bf9370df038_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://01.imgmini.eastday.com/mobile/20170314/20170314144311_cd1263aaaaab4e88c76a1bf9370df038_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://01.imgmini.eastday.com/mobile/20170314/20170314144311_cd1263aaaaab4e88c76a1bf9370df038_3_mwpm_03200403.jpeg"},{"uniquekey":"fd499f84ab2a0736a5f4988481bb9e6b","title":"前港姐颈部惊现巨瘤！随剧集播出越长越大","date":"2017-03-14 14:39","category":"头条","author_name":"东方日报","url":"http://mini.eastday.com/mobile/170314143940866.html","thumbnail_pic_s":"http://07.imgmini.eastday.com/mobile/20170314/20170314143940_7cc8d4b9078ce57ce18cb92c6f7266fd_1_mwpm_03200403.jpeg"},{"uniquekey":"bfb2f87cc0cb2769a20ed85ca0013982","title":"只因奶奶习惯性的一些动作，10个月大的婴儿就患上结石","date":"2017-03-14 14:35","category":"头条","author_name":"育儿百科圈","url":"http://mini.eastday.com/mobile/170314143539167.html","thumbnail_pic_s":"http://01.imgmini.eastday.com/mobile/20170314/20170314_5e259ef4abf99c60dcf75e95d86925ce_cover_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://01.imgmini.eastday.com/mobile/20170314/20170314_ac2fbe1822be50f0065a4d207e6d36c9_cover_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://01.imgmini.eastday.com/mobile/20170314/20170314_7ddadae1524af29cfbc172ddc8f0a12f_cover_mwpm_03200403.jpeg"},{"uniquekey":"b95e722db07b076a2d5072570df37386","title":"八问养老金，不看小心白干30年","date":"2017-03-14 14:34","category":"头条","author_name":"养老金姐","url":"http://mini.eastday.com/mobile/170314143430651.html","thumbnail_pic_s":"http://07.imgmini.eastday.com/mobile/20170314/20170314_79ca254364a7c8e31c8471942465bad9_cover_mwpm_03200403.png"},{"uniquekey":"9a81117d9b56196885f04589bfc75f89","title":"曾荫权余罪将于9月底重审 法官下令限制报道内容","date":"2017-03-14 14:29","category":"头条","author_name":"海外网","url":"http://mini.eastday.com/mobile/170314142926977.html","thumbnail_pic_s":"http://09.imgmini.eastday.com/mobile/20170314/20170314142926_ab09947ffe768ed92c39d4c5ac352389_1_mwpm_03200403.jpeg"},{"uniquekey":"a5de5a29e523c2a58c1bfec7211a1968","title":"被追问为什么同意陈冠希给自己拍那些照片，阿娇的回答让人震惊！","date":"2017-03-14 14:16","category":"头条","author_name":"全民娱乐联盟","url":"http://mini.eastday.com/mobile/170314141653681.html","thumbnail_pic_s":"http://06.imgmini.eastday.com/mobile/20170314/20170314_7f59053d1ff921d841e1424d3f1fb7bf_mwpm_03200403.jpg","thumbnail_pic_s02":"http://06.imgmini.eastday.com/mobile/20170314/20170314_2a7ad2621e4b87bc27dca29a4df875f1_mwpm_03200403.jpg","thumbnail_pic_s03":"http://06.imgmini.eastday.com/mobile/20170314/20170314_d8af324d750144088c4bdec3a5f475f5_mwpm_03200403.jpg"},{"uniquekey":"65a6153f0f67926780cbb7104e0f66ec","title":"最高检工作报告\u201c修身记\u201d:修改42处 史上最多","date":"2017-03-14 14:14","category":"头条","author_name":"正义网","url":"http://mini.eastday.com/mobile/170314141427499.html","thumbnail_pic_s":"http://00.imgmini.eastday.com/mobile/20170314/20170314141427_d30418593e5e04dacd4e23951f8a32c3_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://00.imgmini.eastday.com/mobile/20170314/20170314141427_d30418593e5e04dacd4e23951f8a32c3_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://00.imgmini.eastday.com/mobile/20170314/20170314141427_d30418593e5e04dacd4e23951f8a32c3_3_mwpm_03200403.jpeg"},{"uniquekey":"3a6fe1b6d281b0122e3c1eb2dea46046","title":"只要你是属这6大生肖的人，鸡年就富贵","date":"2017-03-14 14:13","category":"头条","author_name":"星座圈","url":"http://mini.eastday.com/mobile/170314141317936.html","thumbnail_pic_s":"http://07.imgmini.eastday.com/mobile/20170314/20170314141317_7436750d46fc98b6dd7197dd1fcc31ea_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://07.imgmini.eastday.com/mobile/20170314/20170314141317_7436750d46fc98b6dd7197dd1fcc31ea_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://07.imgmini.eastday.com/mobile/20170314/20170314141317_7436750d46fc98b6dd7197dd1fcc31ea_3_mwpm_03200403.jpeg"},{"uniquekey":"35310ef9695317fc6ee70f2ff12b2029","title":"普京 特朗普被恶搞 画面太和谐了","date":"2017-03-14 14:12","category":"头条","author_name":"娱乐影视厅","url":"http://mini.eastday.com/mobile/170314141232292.html","thumbnail_pic_s":"http://03.imgmini.eastday.com/mobile/20170314/20170314_1aff7eed7080919eeebe417cdeb3b3d7_cover_mwpm_03200403.png","thumbnail_pic_s02":"http://03.imgmini.eastday.com/mobile/20170314/20170314_e209683403ecd98113396f4cd88208f4_cover_mwpm_03200403.png","thumbnail_pic_s03":"http://03.imgmini.eastday.com/mobile/20170314/20170314_041320565c2c9f23ec3bd8aafb09dcec_cover_mwpm_03200403.png"},{"uniquekey":"c50156148f6ebb150678b46d14a5608f","title":"国资委任免三大航空公司、电信及联通党组副书记(名单)","date":"2017-03-14 14:06","category":"头条","author_name":"中国经济网","url":"http://mini.eastday.com/mobile/170314140631174.html","thumbnail_pic_s":"http://01.imgmini.eastday.com/mobile/20170314/20170314140631_08026a928f0fddc733da6112cfc99540_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://01.imgmini.eastday.com/mobile/20170314/20170314140631_08026a928f0fddc733da6112cfc99540_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://01.imgmini.eastday.com/mobile/20170314/20170314140631_08026a928f0fddc733da6112cfc99540_3_mwpm_03200403.png"},{"uniquekey":"cd4059adff9ac6ad032aa343e2af375f","title":"【两会有啥事 我们帮你问】记者回访人大代表：老百姓的事儿都不是小事","date":"2017-03-14 14:02","category":"头条","author_name":"央视网","url":"http://mini.eastday.com/mobile/170314140202308.html","thumbnail_pic_s":"http://02.imgmini.eastday.com/mobile/20170314/20170314140202_aec071ec1da438cb8af150eb0cdfa6af_1_mwpm_03200403.jpeg"},{"uniquekey":"b76bc44887c9bc91e0e208a5e6a84758","title":"李稻葵：世界将出现难以避免的黄金恐慌","date":"2017-03-14 13:56","category":"头条","author_name":"中国黄金网","url":"http://mini.eastday.com/mobile/170314135629041.html","thumbnail_pic_s":"http://06.imgmini.eastday.com/mobile/20170314/20170314135629_e93cee0e9fe251afc895db18227d46d9_1_mwpm_03200403.jpeg"},{"uniquekey":"20f2263528ebfaeba0bd4e55eb90366d","title":"四川省投资集团副总经理朱兵被双开 对抗组织审查","date":"2017-03-14 13:56","category":"头条","author_name":"中国警察网","url":"http://mini.eastday.com/mobile/170314135610732.html","thumbnail_pic_s":"http://09.imgmini.eastday.com/mobile/20170314/20170314135610_7c3e20cc31438d4e53eb9a75c97b4779_1_mwpm_03200403.jpeg"},{"uniquekey":"26be61df2bd020a8a77b4f67ca572a0d","title":"日本为何派\u201c出云号\u201d巡航南海？原来是想这样警告中国","date":"2017-03-14 13:52","category":"头条","author_name":"周边军事观察","url":"http://mini.eastday.com/mobile/170314135214746.html","thumbnail_pic_s":"http://06.imgmini.eastday.com/mobile/20170314/20170314135214_0a00c35fe9ec8467a0f74e5f27954747_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://06.imgmini.eastday.com/mobile/20170314/20170314135214_0a00c35fe9ec8467a0f74e5f27954747_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://06.imgmini.eastday.com/mobile/20170314/20170314135214_0a00c35fe9ec8467a0f74e5f27954747_3_mwpm_03200403.jpeg"},{"uniquekey":"93c4acbf8d177988f5f08e26a22f996a","title":"快讯：午后开盘指数小幅震荡沪指涨0.09% 军工板块异动","date":"2017-03-14 13:47","category":"头条","author_name":"新浪","url":"http://mini.eastday.com/mobile/170314134753470.html","thumbnail_pic_s":"http://02.imgmini.eastday.com/mobile/20170314/20170314134753_e386c4e78429a125c97ec882f85f8dc9_1_mwpm_03200403.png"},{"uniquekey":"46061bcbabd79660afbe8d94b9d0aeba","title":"通过一些手段这些胖女孩\u201c变瘦\u201d后，她们更美了!","date":"2017-03-14 13:45","category":"头条","author_name":"玖零视野","url":"http://mini.eastday.com/mobile/170314134548926.html","thumbnail_pic_s":"http://05.imgmini.eastday.com/mobile/20170314/20170314_40df2731dd40d99be62202031cc66b6e_cover_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://05.imgmini.eastday.com/mobile/20170314/20170314_67426b64454865b5e1d9961ce2fb2836_cover_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://05.imgmini.eastday.com/mobile/20170314/20170314_a22842257a3522c5366bf48f1d9f6df6_cover_mwpm_03200403.jpeg"},{"uniquekey":"16e5382b8d25fe89ea19a04c5433bc10","title":"日本人为什么讨厌参加婚礼？原因竟然是这样\u2026","date":"2017-03-14 13:41","category":"头条","author_name":"人民网-日本频道","url":"http://mini.eastday.com/mobile/170314134151151.html","thumbnail_pic_s":"http://07.imgmini.eastday.com/mobile/20170314/20170314134151_65287d4e1aa48841751d0f0b83d73d2b_1_mwpm_03200403.jpeg"}]}
+     * error_code : 0
      */
 
-    private int code;
-    private String msg;
-    private List<NewslistBean> newslist;
+    private String reason;
+    private ResultBean result;
+    private int error_code;
 
-    public int getCode() {
-        return code;
+    public String getReason() {
+        return reason;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public void setReason(String reason) {
+        this.reason = reason;
     }
 
-    public String getMsg() {
-        return msg;
+    public ResultBean getResult() {
+        return result;
     }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
+    public void setResult(ResultBean result) {
+        this.result = result;
     }
 
-    public List<NewslistBean> getNewslist() {
-        return newslist;
+    public int getError_code() {
+        return error_code;
     }
 
-    public void setNewslist(List<NewslistBean> newslist) {
-        this.newslist = newslist;
+    public void setError_code(int error_code) {
+        this.error_code = error_code;
     }
 
-    public static class NewslistBean {
+    public static class ResultBean {
         /**
-         * ctime : 2017-03-11 11:05
-         * title : 济南工地土层塌方 消防员徒手挖出两名被困工人
-         * description : 搜狐社会
-         * picUrl : http://photocdn.sohu.com/20170311/Img483001844_ss.jpeg
-         * url : http://news.sohu.com/20170311/n483001843.shtml
+         * stat : 1
+         * data : [{"uniquekey":"b97ebcd72b97a7a7374c3ee1343f7544","title":"太空可数毛！中国最强卫星传回超高清照片","date":"2017-03-14 15:26","category":"头条","author_name":"快科技","url":"http://mini.eastday.com/mobile/170314152618212.html","thumbnail_pic_s":"http://06.imgmini.eastday.com/mobile/20170314/20170314152618_8fbc34ae18c4bac2f568435c8386c634_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://06.imgmini.eastday.com/mobile/20170314/20170314152618_8fbc34ae18c4bac2f568435c8386c634_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://06.imgmini.eastday.com/mobile/20170314/20170314152618_8fbc34ae18c4bac2f568435c8386c634_3_mwpm_03200403.jpeg"},{"uniquekey":"bf66642b9e9a865632c095aa0d46d281","title":"沙特国王萨勒曼到访皇居 日本天皇设宴迎接","date":"2017-03-14 15:56","category":"头条","author_name":"环球网","url":"http://mini.eastday.com/mobile/170314155613456.html","thumbnail_pic_s":"http://05.imgmini.eastday.com/mobile/20170314/20170314155613_481bdc206760271462311669d657179d_1_mwpm_03200403.jpeg"},{"uniquekey":"33ed351f2d321860ccd771ce449b5360","title":"不顾菲律宾抗议 影射菲总统美剧照常播出","date":"2017-03-14 15:56","category":"头条","author_name":"环球网","url":"http://mini.eastday.com/mobile/170314155613008.html","thumbnail_pic_s":"http://02.imgmini.eastday.com/mobile/20170314/20170314155613_1a028834a343f8393f048505715c90a3_1_mwpm_03200403.jpeg"},{"uniquekey":"f8b87a7ac4024243ae460f334147a498","title":"白宫发言人：特朗普说\u201c窃听\u201d时，意思并非\u201c窃听\u201d...","date":"2017-03-14 15:26","category":"头条","author_name":"环球网","url":"http://mini.eastday.com/mobile/170314152610810.html","thumbnail_pic_s":"http://02.imgmini.eastday.com/mobile/20170314/20170314152610_81f5fe470a0d1845f7471bfc13c6b7d2_1_mwpm_03200403.png","thumbnail_pic_s02":"http://02.imgmini.eastday.com/mobile/20170314/20170314152610_81f5fe470a0d1845f7471bfc13c6b7d2_3_mwpm_03200403.png"},{"uniquekey":"f723c6da0425d1aa159c3061dd8c04f6","title":"受特朗普旅行禁令影响  加拿大女童子军组织取消访美计划","date":"2017-03-14 15:26","category":"头条","author_name":"环球网","url":"http://mini.eastday.com/mobile/170314152608328.html","thumbnail_pic_s":"http://03.imgmini.eastday.com/mobile/20170314/20170314152608_877b71c5893d2c85ff9830a86bb376c4_1_mwpm_03200403.jpeg"},{"uniquekey":"d8f023624986f07e029aaede242d158d","title":"中国建筑队完成\u201c非洲第一高\u201d 将成为世界第三大清真寺","date":"2017-03-14 15:17","category":"头条","author_name":"中国日报网","url":"http://mini.eastday.com/mobile/170314151757493.html","thumbnail_pic_s":"http://00.imgmini.eastday.com/mobile/20170314/20170314151757_eedfc0e87c10fa9478ca4fe8695db1cb_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://00.imgmini.eastday.com/mobile/20170314/20170314151757_2a6ca57216f0db27b3b43889e319f09e_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://00.imgmini.eastday.com/mobile/20170314/20170314151757_670c445fb38498cc8e3eec2258d8ea57_3_mwpm_03200403.jpeg"},{"uniquekey":"359783d86923ef847e1408a6ccaa11aa","title":"中银国际首席策略：A股春暖花待谢 整体估值仍然偏高维持谨慎","date":"2017-03-14 15:13","category":"头条","author_name":"新浪","url":"http://mini.eastday.com/mobile/170314151311092.html","thumbnail_pic_s":"http://02.imgmini.eastday.com/mobile/20170314/20170314151311_2c09a5f695f715b9341c2e82ca9590df_1_mwpm_03200403.png","thumbnail_pic_s02":"http://02.imgmini.eastday.com/mobile/20170314/20170314151311_2c09a5f695f715b9341c2e82ca9590df_2_mwpm_03200403.png","thumbnail_pic_s03":"http://02.imgmini.eastday.com/mobile/20170314/20170314151311_2c09a5f695f715b9341c2e82ca9590df_3_mwpm_03200403.png"},{"uniquekey":"e21631e30821694a34f3fb8af724cdea","title":"北京方庄桥东一路虎车冲上公交车站，1死2伤","date":"2017-03-14 15:02","category":"头条","author_name":"北京交通广播","url":"http://mini.eastday.com/mobile/170314150210716.html","thumbnail_pic_s":"http://03.imgmini.eastday.com/mobile/20170314/20170314150210_d515895f253926d78656e69cd34dfc61_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://03.imgmini.eastday.com/mobile/20170314/20170314150210_d515895f253926d78656e69cd34dfc61_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://03.imgmini.eastday.com/mobile/20170314/20170314150210_d515895f253926d78656e69cd34dfc61_3_mwpm_03200403.jpeg"},{"uniquekey":"e82054201d6d5103e7854274c2ae17ec","title":"美国副总统彭斯4月将访问印尼、日、韩、澳，修补与盟友关系","date":"2017-03-14 14:58","category":"头条","author_name":"澎湃新闻","url":"http://mini.eastday.com/mobile/170314145838933.html","thumbnail_pic_s":"http://08.imgmini.eastday.com/mobile/20170314/20170314145838_02160cae557d0623758e1c72433d1051_1_mwpm_03200403.jpeg"},{"uniquekey":"1eddd1305d74d3f3176005f62902c937","title":"北京方庄桥一路虎冲上公交站台 致行人一死两伤","date":"2017-03-14 14:56","category":"头条","author_name":"北青网-北京青年报","url":"http://mini.eastday.com/mobile/170314145647568.html","thumbnail_pic_s":"http://07.imgmini.eastday.com/mobile/20170314/20170314145647_a8021e91502198917f376160fa0c463f_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://07.imgmini.eastday.com/mobile/20170314/20170314145647_a8021e91502198917f376160fa0c463f_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://07.imgmini.eastday.com/mobile/20170314/20170314145647_a8021e91502198917f376160fa0c463f_3_mwpm_03200403.jpeg"},{"uniquekey":"86407fe16797b1e5fac2021ebcab582a","title":"台湾特种部队只穿红内裤训练","date":"2017-03-14 14:55","category":"头条","author_name":"环球网","url":"http://mini.eastday.com/mobile/170314145536511.html","thumbnail_pic_s":"http://08.imgmini.eastday.com/mobile/20170314/20170314145536_d68d081131f6c5480c68e23f56e788e2_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://08.imgmini.eastday.com/mobile/20170314/20170314145536_bf35ccf19b8130817dd83f6303032096_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://08.imgmini.eastday.com/mobile/20170314/20170314145536_9c5e55d20192b598bed9005e48ac86d6_3_mwpm_03200403.jpeg"},{"uniquekey":"10487cf10d28b5e70c5ea1d4b861406c","title":"震惊！14岁少女诞下女婴，让人更没想到的是孩子父亲\u2026\u2026","date":"2017-03-14 14:52","category":"头条","author_name":"观望","url":"http://mini.eastday.com/mobile/170314145244444.html","thumbnail_pic_s":"http://04.imgmini.eastday.com/mobile/20170314/20170314_d0df9125fbfd2a56b5f175777601c7fc_cover_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://04.imgmini.eastday.com/mobile/20170314/20170314_8655840af030d838c7afb0a5c6e290b9_cover_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://04.imgmini.eastday.com/mobile/20170314/20170314_a1bb5ace4e9186f53ff83b6bf4c068c5_cover_mwpm_03200403.jpeg"},{"uniquekey":"c3a4bf64a9823f16120a992383ee8404","title":"赌王儿子遭航空公司冷待 知其身份后态度大变","date":"2017-03-14 14:46","category":"头条","author_name":"新浪娱乐","url":"http://mini.eastday.com/mobile/170314144633472.html","thumbnail_pic_s":"http://06.imgmini.eastday.com/mobile/20170314/20170314144633_70f168ccab579627aa283f28d2a3b0aa_1_mwpm_03200403.jpeg"},{"uniquekey":"53d706bb2220dfbcc84538cd84488a92","title":"这个国家曾经送中国一艘航母，中国为什么婉言谢绝了？","date":"2017-03-14 14:43","category":"头条","author_name":"兰博军事迷","url":"http://mini.eastday.com/mobile/170314144311002.html","thumbnail_pic_s":"http://01.imgmini.eastday.com/mobile/20170314/20170314144311_cd1263aaaaab4e88c76a1bf9370df038_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://01.imgmini.eastday.com/mobile/20170314/20170314144311_cd1263aaaaab4e88c76a1bf9370df038_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://01.imgmini.eastday.com/mobile/20170314/20170314144311_cd1263aaaaab4e88c76a1bf9370df038_3_mwpm_03200403.jpeg"},{"uniquekey":"fd499f84ab2a0736a5f4988481bb9e6b","title":"前港姐颈部惊现巨瘤！随剧集播出越长越大","date":"2017-03-14 14:39","category":"头条","author_name":"东方日报","url":"http://mini.eastday.com/mobile/170314143940866.html","thumbnail_pic_s":"http://07.imgmini.eastday.com/mobile/20170314/20170314143940_7cc8d4b9078ce57ce18cb92c6f7266fd_1_mwpm_03200403.jpeg"},{"uniquekey":"bfb2f87cc0cb2769a20ed85ca0013982","title":"只因奶奶习惯性的一些动作，10个月大的婴儿就患上结石","date":"2017-03-14 14:35","category":"头条","author_name":"育儿百科圈","url":"http://mini.eastday.com/mobile/170314143539167.html","thumbnail_pic_s":"http://01.imgmini.eastday.com/mobile/20170314/20170314_5e259ef4abf99c60dcf75e95d86925ce_cover_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://01.imgmini.eastday.com/mobile/20170314/20170314_ac2fbe1822be50f0065a4d207e6d36c9_cover_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://01.imgmini.eastday.com/mobile/20170314/20170314_7ddadae1524af29cfbc172ddc8f0a12f_cover_mwpm_03200403.jpeg"},{"uniquekey":"b95e722db07b076a2d5072570df37386","title":"八问养老金，不看小心白干30年","date":"2017-03-14 14:34","category":"头条","author_name":"养老金姐","url":"http://mini.eastday.com/mobile/170314143430651.html","thumbnail_pic_s":"http://07.imgmini.eastday.com/mobile/20170314/20170314_79ca254364a7c8e31c8471942465bad9_cover_mwpm_03200403.png"},{"uniquekey":"9a81117d9b56196885f04589bfc75f89","title":"曾荫权余罪将于9月底重审 法官下令限制报道内容","date":"2017-03-14 14:29","category":"头条","author_name":"海外网","url":"http://mini.eastday.com/mobile/170314142926977.html","thumbnail_pic_s":"http://09.imgmini.eastday.com/mobile/20170314/20170314142926_ab09947ffe768ed92c39d4c5ac352389_1_mwpm_03200403.jpeg"},{"uniquekey":"a5de5a29e523c2a58c1bfec7211a1968","title":"被追问为什么同意陈冠希给自己拍那些照片，阿娇的回答让人震惊！","date":"2017-03-14 14:16","category":"头条","author_name":"全民娱乐联盟","url":"http://mini.eastday.com/mobile/170314141653681.html","thumbnail_pic_s":"http://06.imgmini.eastday.com/mobile/20170314/20170314_7f59053d1ff921d841e1424d3f1fb7bf_mwpm_03200403.jpg","thumbnail_pic_s02":"http://06.imgmini.eastday.com/mobile/20170314/20170314_2a7ad2621e4b87bc27dca29a4df875f1_mwpm_03200403.jpg","thumbnail_pic_s03":"http://06.imgmini.eastday.com/mobile/20170314/20170314_d8af324d750144088c4bdec3a5f475f5_mwpm_03200403.jpg"},{"uniquekey":"65a6153f0f67926780cbb7104e0f66ec","title":"最高检工作报告\u201c修身记\u201d:修改42处 史上最多","date":"2017-03-14 14:14","category":"头条","author_name":"正义网","url":"http://mini.eastday.com/mobile/170314141427499.html","thumbnail_pic_s":"http://00.imgmini.eastday.com/mobile/20170314/20170314141427_d30418593e5e04dacd4e23951f8a32c3_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://00.imgmini.eastday.com/mobile/20170314/20170314141427_d30418593e5e04dacd4e23951f8a32c3_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://00.imgmini.eastday.com/mobile/20170314/20170314141427_d30418593e5e04dacd4e23951f8a32c3_3_mwpm_03200403.jpeg"},{"uniquekey":"3a6fe1b6d281b0122e3c1eb2dea46046","title":"只要你是属这6大生肖的人，鸡年就富贵","date":"2017-03-14 14:13","category":"头条","author_name":"星座圈","url":"http://mini.eastday.com/mobile/170314141317936.html","thumbnail_pic_s":"http://07.imgmini.eastday.com/mobile/20170314/20170314141317_7436750d46fc98b6dd7197dd1fcc31ea_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://07.imgmini.eastday.com/mobile/20170314/20170314141317_7436750d46fc98b6dd7197dd1fcc31ea_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://07.imgmini.eastday.com/mobile/20170314/20170314141317_7436750d46fc98b6dd7197dd1fcc31ea_3_mwpm_03200403.jpeg"},{"uniquekey":"35310ef9695317fc6ee70f2ff12b2029","title":"普京 特朗普被恶搞 画面太和谐了","date":"2017-03-14 14:12","category":"头条","author_name":"娱乐影视厅","url":"http://mini.eastday.com/mobile/170314141232292.html","thumbnail_pic_s":"http://03.imgmini.eastday.com/mobile/20170314/20170314_1aff7eed7080919eeebe417cdeb3b3d7_cover_mwpm_03200403.png","thumbnail_pic_s02":"http://03.imgmini.eastday.com/mobile/20170314/20170314_e209683403ecd98113396f4cd88208f4_cover_mwpm_03200403.png","thumbnail_pic_s03":"http://03.imgmini.eastday.com/mobile/20170314/20170314_041320565c2c9f23ec3bd8aafb09dcec_cover_mwpm_03200403.png"},{"uniquekey":"c50156148f6ebb150678b46d14a5608f","title":"国资委任免三大航空公司、电信及联通党组副书记(名单)","date":"2017-03-14 14:06","category":"头条","author_name":"中国经济网","url":"http://mini.eastday.com/mobile/170314140631174.html","thumbnail_pic_s":"http://01.imgmini.eastday.com/mobile/20170314/20170314140631_08026a928f0fddc733da6112cfc99540_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://01.imgmini.eastday.com/mobile/20170314/20170314140631_08026a928f0fddc733da6112cfc99540_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://01.imgmini.eastday.com/mobile/20170314/20170314140631_08026a928f0fddc733da6112cfc99540_3_mwpm_03200403.png"},{"uniquekey":"cd4059adff9ac6ad032aa343e2af375f","title":"【两会有啥事 我们帮你问】记者回访人大代表：老百姓的事儿都不是小事","date":"2017-03-14 14:02","category":"头条","author_name":"央视网","url":"http://mini.eastday.com/mobile/170314140202308.html","thumbnail_pic_s":"http://02.imgmini.eastday.com/mobile/20170314/20170314140202_aec071ec1da438cb8af150eb0cdfa6af_1_mwpm_03200403.jpeg"},{"uniquekey":"b76bc44887c9bc91e0e208a5e6a84758","title":"李稻葵：世界将出现难以避免的黄金恐慌","date":"2017-03-14 13:56","category":"头条","author_name":"中国黄金网","url":"http://mini.eastday.com/mobile/170314135629041.html","thumbnail_pic_s":"http://06.imgmini.eastday.com/mobile/20170314/20170314135629_e93cee0e9fe251afc895db18227d46d9_1_mwpm_03200403.jpeg"},{"uniquekey":"20f2263528ebfaeba0bd4e55eb90366d","title":"四川省投资集团副总经理朱兵被双开 对抗组织审查","date":"2017-03-14 13:56","category":"头条","author_name":"中国警察网","url":"http://mini.eastday.com/mobile/170314135610732.html","thumbnail_pic_s":"http://09.imgmini.eastday.com/mobile/20170314/20170314135610_7c3e20cc31438d4e53eb9a75c97b4779_1_mwpm_03200403.jpeg"},{"uniquekey":"26be61df2bd020a8a77b4f67ca572a0d","title":"日本为何派\u201c出云号\u201d巡航南海？原来是想这样警告中国","date":"2017-03-14 13:52","category":"头条","author_name":"周边军事观察","url":"http://mini.eastday.com/mobile/170314135214746.html","thumbnail_pic_s":"http://06.imgmini.eastday.com/mobile/20170314/20170314135214_0a00c35fe9ec8467a0f74e5f27954747_1_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://06.imgmini.eastday.com/mobile/20170314/20170314135214_0a00c35fe9ec8467a0f74e5f27954747_2_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://06.imgmini.eastday.com/mobile/20170314/20170314135214_0a00c35fe9ec8467a0f74e5f27954747_3_mwpm_03200403.jpeg"},{"uniquekey":"93c4acbf8d177988f5f08e26a22f996a","title":"快讯：午后开盘指数小幅震荡沪指涨0.09% 军工板块异动","date":"2017-03-14 13:47","category":"头条","author_name":"新浪","url":"http://mini.eastday.com/mobile/170314134753470.html","thumbnail_pic_s":"http://02.imgmini.eastday.com/mobile/20170314/20170314134753_e386c4e78429a125c97ec882f85f8dc9_1_mwpm_03200403.png"},{"uniquekey":"46061bcbabd79660afbe8d94b9d0aeba","title":"通过一些手段这些胖女孩\u201c变瘦\u201d后，她们更美了!","date":"2017-03-14 13:45","category":"头条","author_name":"玖零视野","url":"http://mini.eastday.com/mobile/170314134548926.html","thumbnail_pic_s":"http://05.imgmini.eastday.com/mobile/20170314/20170314_40df2731dd40d99be62202031cc66b6e_cover_mwpm_03200403.jpeg","thumbnail_pic_s02":"http://05.imgmini.eastday.com/mobile/20170314/20170314_67426b64454865b5e1d9961ce2fb2836_cover_mwpm_03200403.jpeg","thumbnail_pic_s03":"http://05.imgmini.eastday.com/mobile/20170314/20170314_a22842257a3522c5366bf48f1d9f6df6_cover_mwpm_03200403.jpeg"},{"uniquekey":"16e5382b8d25fe89ea19a04c5433bc10","title":"日本人为什么讨厌参加婚礼？原因竟然是这样\u2026","date":"2017-03-14 13:41","category":"头条","author_name":"人民网-日本频道","url":"http://mini.eastday.com/mobile/170314134151151.html","thumbnail_pic_s":"http://07.imgmini.eastday.com/mobile/20170314/20170314134151_65287d4e1aa48841751d0f0b83d73d2b_1_mwpm_03200403.jpeg"}]
          */
 
-        private String ctime;
-        private String title;
-        private String description;
-        private String picUrl;
-        private String url;
+        private String stat;
+        private List<DataBean> data;
 
-        public String getCtime() {
-            return ctime;
+        public String getStat() {
+            return stat;
         }
 
-        public void setCtime(String ctime) {
-            this.ctime = ctime;
+        public void setStat(String stat) {
+            this.stat = stat;
         }
 
-        public String getTitle() {
-            return title;
+        public List<DataBean> getData() {
+            return data;
         }
 
-        public void setTitle(String title) {
-            this.title = title;
+        public void setData(List<DataBean> data) {
+            this.data = data;
         }
 
-        public String getDescription() {
-            return description;
-        }
+        public static class DataBean {
+            /**
+             * uniquekey : b97ebcd72b97a7a7374c3ee1343f7544
+             * title : 太空可数毛！中国最强卫星传回超高清照片
+             * date : 2017-03-14 15:26
+             * category : 头条
+             * author_name : 快科技
+             * url : http://mini.eastday.com/mobile/170314152618212.html
+             * thumbnail_pic_s : http://06.imgmini.eastday.com/mobile/20170314/20170314152618_8fbc34ae18c4bac2f568435c8386c634_1_mwpm_03200403.jpeg
+             * thumbnail_pic_s02 : http://06.imgmini.eastday.com/mobile/20170314/20170314152618_8fbc34ae18c4bac2f568435c8386c634_2_mwpm_03200403.jpeg
+             * thumbnail_pic_s03 : http://06.imgmini.eastday.com/mobile/20170314/20170314152618_8fbc34ae18c4bac2f568435c8386c634_3_mwpm_03200403.jpeg
+             */
 
-        public void setDescription(String description) {
-            this.description = description;
-        }
+            private String uniquekey;
+            private String title;
+            private String date;
+            private String category;
+            private String author_name;
+            private String url;
+            private String thumbnail_pic_s;
+            private String thumbnail_pic_s02;
+            private String thumbnail_pic_s03;
 
-        public String getPicUrl() {
-            return picUrl;
-        }
+            public String getUniquekey() {
+                return uniquekey;
+            }
 
-        public void setPicUrl(String picUrl) {
-            this.picUrl = picUrl;
-        }
+            public void setUniquekey(String uniquekey) {
+                this.uniquekey = uniquekey;
+            }
 
-        public String getUrl() {
-            return url;
-        }
+            public String getTitle() {
+                return title;
+            }
 
-        public void setUrl(String url) {
-            this.url = url;
+            public void setTitle(String title) {
+                this.title = title;
+            }
+
+            public String getDate() {
+                return date;
+            }
+
+            public void setDate(String date) {
+                this.date = date;
+            }
+
+            public String getCategory() {
+                return category;
+            }
+
+            public void setCategory(String category) {
+                this.category = category;
+            }
+
+            public String getAuthor_name() {
+                return author_name;
+            }
+
+            public void setAuthor_name(String author_name) {
+                this.author_name = author_name;
+            }
+
+            public String getUrl() {
+                return url;
+            }
+
+            public void setUrl(String url) {
+                this.url = url;
+            }
+
+            public String getThumbnail_pic_s() {
+                return thumbnail_pic_s;
+            }
+
+            public void setThumbnail_pic_s(String thumbnail_pic_s) {
+                this.thumbnail_pic_s = thumbnail_pic_s;
+            }
+
+            public String getThumbnail_pic_s02() {
+                return thumbnail_pic_s02;
+            }
+
+            public void setThumbnail_pic_s02(String thumbnail_pic_s02) {
+                this.thumbnail_pic_s02 = thumbnail_pic_s02;
+            }
+
+            public String getThumbnail_pic_s03() {
+                return thumbnail_pic_s03;
+            }
+
+            public void setThumbnail_pic_s03(String thumbnail_pic_s03) {
+                this.thumbnail_pic_s03 = thumbnail_pic_s03;
+            }
         }
     }
 }

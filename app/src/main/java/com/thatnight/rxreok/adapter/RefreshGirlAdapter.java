@@ -5,17 +5,17 @@ import android.view.ViewGroup;
 
 import com.jude.easyrecyclerview.adapter.BaseViewHolder;
 import com.jude.easyrecyclerview.adapter.RecyclerArrayAdapter;
-import com.thatnight.rxreok.bean.News;
+import com.thatnight.rxreok.bean.Girl;
 
 /**
  * Time:2017.3.11 20:20
  * Created By:ThatNight
  */
 
-public class RefreshRvAdapter extends RecyclerArrayAdapter<News> {
+public class RefreshGirlAdapter extends RecyclerArrayAdapter<Girl> {
     private Context mContext;
 
-    public RefreshRvAdapter(Context context) {
+    public RefreshGirlAdapter(Context context) {
         super(context);
         mContext=context;
     }
@@ -23,6 +23,6 @@ public class RefreshRvAdapter extends RecyclerArrayAdapter<News> {
 
     @Override
     public BaseViewHolder OnCreateViewHolder(ViewGroup parent, int viewType) {
-        return new RecyclerHolder(parent);
+        return new RecyclerGirlHolder(parent);
     }
 }

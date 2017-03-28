@@ -7,25 +7,33 @@ package com.thatnight.rxreok.bean;
 
 public class News {
     /**
-     * ctime : 2017-03-11 11:05
-     * title : 济南工地土层塌方 消防员徒手挖出两名被困工人
-     * description : 搜狐社会
-     * picUrl : http://photocdn.sohu.com/20170311/Img483001844_ss.jpeg
-     * url : http://news.sohu.com/20170311/n483001843.shtml
+     * uniquekey : b97ebcd72b97a7a7374c3ee1343f7544
+     * title : 太空可数毛！中国最强卫星传回超高清照片
+     * date : 2017-03-14 15:26
+     * category : 头条
+     * author_name : 快科技
+     * url : http://mini.eastday.com/mobile/170314152618212.html
+     * thumbnail_pic_s : http://06.imgmini.eastday.com/mobile/20170314/20170314152618_8fbc34ae18c4bac2f568435c8386c634_1_mwpm_03200403.jpeg
+     * thumbnail_pic_s02 : http://06.imgmini.eastday.com/mobile/20170314/20170314152618_8fbc34ae18c4bac2f568435c8386c634_2_mwpm_03200403.jpeg
+     * thumbnail_pic_s03 : http://06.imgmini.eastday.com/mobile/20170314/20170314152618_8fbc34ae18c4bac2f568435c8386c634_3_mwpm_03200403.jpeg
      */
 
-    private String ctime;
+    private String uniquekey;
     private String title;
-    private String description;
-    private String picUrl;
+    private String date;
+    private String category;
+    private String author_name;
     private String url;
+    private String thumbnail_pic_s;
+    private String thumbnail_pic_s02;
+    private String thumbnail_pic_s03;
 
-    public String getCtime() {
-        return ctime;
+    public String getUniquekey() {
+        return uniquekey;
     }
 
-    public void setCtime(String ctime) {
-        this.ctime = ctime;
+    public void setUniquekey(String uniquekey) {
+        this.uniquekey = uniquekey;
     }
 
     public String getTitle() {
@@ -36,20 +44,28 @@ public class News {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDate() {
+        return date;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public String getPicUrl() {
-        return picUrl;
+    public String getCategory() {
+        return category;
     }
 
-    public void setPicUrl(String picUrl) {
-        this.picUrl = picUrl;
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getAuthor_name() {
+        return author_name;
+    }
+
+    public void setAuthor_name(String author_name) {
+        this.author_name = author_name;
     }
 
     public String getUrl() {
@@ -60,4 +76,27 @@ public class News {
         this.url = url;
     }
 
+    public String getThumbnail_pic_s() {
+        return thumbnail_pic_s;
+    }
+
+    public void setThumbnail_pic_s(String thumbnail_pic_s) {
+        this.thumbnail_pic_s = thumbnail_pic_s;
+    }
+
+    public String getThumbnail_pic_s02() {
+        return thumbnail_pic_s02;
+    }
+
+    public void setThumbnail_pic_s02(String thumbnail_pic_s02) {
+        this.thumbnail_pic_s02 = thumbnail_pic_s02;
+    }
+
+    public String getThumbnail_pic_s03() {
+        return thumbnail_pic_s03;
+    }
+
+    public void setThumbnail_pic_s03(String thumbnail_pic_s03) {
+        this.thumbnail_pic_s03 = thumbnail_pic_s03;
+    }
 }

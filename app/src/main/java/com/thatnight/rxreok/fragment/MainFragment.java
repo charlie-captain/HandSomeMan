@@ -2,45 +2,42 @@ package com.thatnight.rxreok.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.thatnight.rxreok.R;
-import com.thatnight.rxreok.adapter.RefreshRvAdapter;
-import com.thatnight.rxreok.bean.NewList;
-import com.thatnight.rxreok.bean.News;
-import com.thatnight.rxreok.constant.Constant;
-import com.thatnight.rxreok.http.ApiManager;
+import com.thatnight.rxreok.adapter.FragmentAdapter;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.converter.scalars.ScalarsConverterFactory;
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Func1;
-import rx.schedulers.Schedulers;
 
 /**
- * Time:2017.3.11 19:42
+ * Time:2017.3.18 18:00
  * Created By:ThatNight
  */
 
-public class MainFragment extends BaseFragment {
+public class MainFragment extends Fragment {
 
-    @InjectView(R.id.rv_main)
-    RecyclerView mRvMain;
-    private boolean isFinish = false;
-    private RefreshRvAdapter mRefreshRvAdapter;
+    private final static int FRAGMENT_PAGE = 3;
+
+    @InjectView(R.id.tlb_main)
+    Toolbar mTlbMain;
+    @InjectView(R.id.tl_main)
+    TabLayout mTlMain;
+    @InjectView(R.id.abl_main)
+    AppBarLayout mAblMain;
+    @InjectView(R.id.vp_main)
+    ViewPager mVpMain;
+
 
     @Nullable
     @Override
@@ -48,73 +45,28 @@ public class MainFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         ButterKnife.inject(this, view);
         initView();
-        isFinish = true;
-        onLazy();
+        initViewPager();
         return view;
+
     }
 
     private void initView() {
-        mRefreshRvAdapter =new RefreshRvAdapter(getActivity());
-        mRvMain.setLayoutManager(new LinearLayoutManager(mRvMain.getContext()));
-        mRvMain.setAdapter(mRefreshRvAdapter);
+        mTlbMain.setTitle("男人帮");
     }
 
-    @Override
-    protected void onLazy() {
-        if (!isVisiable || !isFinish) {
-            return;
+    private void initViewPager() {
+        List<String> title = Arrays.asList("新闻", "美女", "健康");
+
+        List<BaseFragment> fragments = Arrays.asList(new NewsFragment(), new GirlFragment(), new HealthFragment());
+
+        for (int i = 0; i < FRAGMENT_PAGE; i++) {
+            mTlMain.addTab(mTlMain.newTab().setText(title.get(i)));
         }
-        // TODO: 2017.3.11 加载数据
-        getData(Constant.KEY,10);
 
-    }
-
-    public void getData(String key, int num) {
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constant.BASE_URL)
-                .addConverterFactory(ScalarsConverterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-                .build();
-        ApiManager apiManager = retrofit.create(ApiManager.class);
-        apiManager.getNews(key,num)
-                .subscribeOn(Schedulers.io())
-                .map(new Func1<NewList, List<News>>() {
-                    @Override
-                    public List<News> call(NewList newList) {
-                        List<News> news=new ArrayList<News>();
-                        for(NewList.NewslistBean eachNews:newList.getNewslist()){
-                            News everyNews=new News();
-                            everyNews.setCtime(eachNews.getCtime());
-                            everyNews.setDescription(eachNews.getDescription());
-                            everyNews.setPicUrl(eachNews.getPicUrl());
-                            everyNews.setTitle(eachNews.getTitle());
-                            everyNews.setUrl(eachNews.getUrl());
-                            news.add(everyNews);
-                        }
-                        return news;
-                    }
-                })
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<List<News>>() {
-                    @Override
-                    public void onCompleted() {
-
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        Toast.makeText(getActivity(), "网络出了些问题", Toast.LENGTH_SHORT).show();
-                        e.printStackTrace();
-                    }
-
-                    @Override
-                    public void onNext(List<News> newses) {
-                        mRefreshRvAdapter.addAll(newses);
-                    }
-                });
-
-
+        FragmentAdapter fragmentAdapter = new FragmentAdapter(getChildFragmentManager(), fragments, title);
+        mVpMain.setAdapter(fragmentAdapter);
+        mTlMain.setupWithViewPager(mVpMain);
+        mTlMain.setTabsFromPagerAdapter(fragmentAdapter);
     }
 
     @Override
